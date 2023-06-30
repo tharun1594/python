@@ -1,0 +1,9 @@
+#Write a program that takes a positive integer from the user and prints the sum of its digits through recursion.
+
+num = input()
+
+total = 0
+for i in num:
+    total += int(i)
+    
+print(total)
