@@ -1,0 +1,28 @@
+#Write a program that takes a string from the user and prints the number of times two vowels and two consonants occur together in the string.
+string = input()
+vowels_list = ['a', 'e', 'i', 'o', 'u']
+no_of_consonants = 0
+no_of_vowels = 0
+is_vowel = False
+consonants = 0
+vowels = 0
+for i in string:
+    if i in vowels_list:
+        is_vowel = True
+        no_of_vowels += 1
+        no_of_consonants = 0
+    else:
+        is_consonant = True
+        no_of_consonants += 1
+        no_of_vowels = 0
+        
+    if no_of_vowels == 2:
+        vowels += 1
+        no_of_vowels = 0
+    
+    if no_of_consonants == 2:
+        consonants = 2
+        no_of_consonants = 2
+        
+print("No of Vowels : " + str(vowels))
+print("No of Consonants : " + str(consonants))
