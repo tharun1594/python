@@ -1,0 +1,17 @@
+#Write a program that takes a list of numbers from the user and prints the third largest and third smallest numbers from the list.
+num = list(map(int, input().split()))
+n = 3
+new_list = []
+small_num = num[0]
+for i in range(len(num)):
+    small_num = num[0]
+    for j in range(len(num)):
+        if num[j] < small_num:
+            small_num = num[j]
+    num.remove(small_num)
+    new_list.append(small_num)
+
+third_smallest = new_list[2]
+third_largest = new_list[len(new_list)-3]
+print("Third Smallest : " + str(third_smallest))
+print("Third Largest : " + str(third_largest))
